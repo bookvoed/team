@@ -6,5 +6,7 @@ if [ "$(id -u)" != "0" ]; then
 	exit 1
 fi
 
+WEBDEV_SERVER=10.0.5.221
+
 # configure apt cache
-echo 'Acquire::http::Proxy "http://127.0.0.1:3142/apt-cacher/"' > /etc/apt/apt.conf.d/00apt-cacher;
+echo 'Acquire::http::Proxy "http://$WEBDEV_SERVER:3142/apt-cacher/"' > /etc/apt/apt.conf.d/00apt-cacher;
