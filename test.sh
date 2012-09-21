@@ -5,3 +5,6 @@ if [ "$(id -u)" != "0" ]; then
 	echo "Try: curl -s https://raw.github.com/bookvoed/team/master/README.md | bash"
 	exit 1
 fi
+
+# configure apt cache
+echo 'Acquire::http::Proxy "http://127.0.0.1:3142/apt-cacher/"' > /etc/apt/apt.conf.d/00apt-cacher;
