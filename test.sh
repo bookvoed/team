@@ -38,7 +38,8 @@ apt-get install \
     nfs-common\
     postgresql-9.1\
     rubygems\
-    python-setuptools
+    python-setuptools\
+    bar
 
 # mount nfs
 
