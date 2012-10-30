@@ -12,9 +12,10 @@ echo 'Acquire::http::Proxy "http://10.0.5.221:3142/apt-cacher/";' > /etc/apt/apt
 add-apt-repository -y ppa:ondrej/php5
 apt-get -y update
 apt-get -y upgrade
+
 apt-get -y install \
     nginx\
-    sphinx\
+    sphinxsearch\
     php5 \
     php5-dev\
     php5-dbg\
@@ -45,14 +46,6 @@ apt-get -y install \
     python-setuptools\
     bar
 
-# mount nfs
-
-mkdir /mnt/web
-mount 10.0.5.221:/srv/homes/web /mnt/web
-
-# add to fstab
-echo "10.0.5.221:/srv/homes/web /mnt/web nfs timeo=10" >> /etc/fstab
-
 pear config-set auto_discover 1
 pear install --alldeps \
    pear.phpunit.de/PHPUnit \
@@ -80,3 +73,11 @@ gem install \
 
 easy_install \
  http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz
+
+ # mount nfs
+
+ mkdir /mnt/web
+ mount 10.0.5.221:/srv/homes/web /mnt/web
+
+ # add to fstab
+ echo "10.0.5.221:/srv/homes/web /mnt/web nfs timeo=10" >> /etc/fstab
