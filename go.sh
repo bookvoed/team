@@ -46,6 +46,7 @@ apt-get -y install \
     python-setuptools\
     bar
 
+pecl install xdebug
 pear config-set auto_discover 1
 pear install --alldeps \
    pear.phpunit.de/PHPUnit \
@@ -76,8 +77,29 @@ easy_install \
 
  # mount nfs
 
- mkdir /mnt/web
- mount 10.0.5.221:/srv/homes/web /mnt/web
+mkdir /mnt/web
+mount 10.0.5.221:/srv/homes/web /mnt/web
+echo "10.0.5.221:/srv/homes/web /mnt/web nfs timeo=10" >> /etc/fstab
 
- # add to fstab
- echo "10.0.5.221:/srv/homes/web /mnt/web nfs timeo=10" >> /etc/fstab
+echo "please enter username:"
+read username
+
+# install phpstorm
+
+/mnt/web/stations/workstation2/soft/phpstorm/install.sh $username
+
+# make workspace
+
+mkdir /home/$username/firebird
+mkdir /home/$username/firebird/dev
+mkdir /home/$username/firebird/rc
+
+mkdir /var/firebird
+mkdir /var/firebird/files
+mkdir /var/firebird/indexes
+mkdir /var/firebird/testcase
+mkdir /var/firebird/testcase/files
+mkdir /var/firebird/testcase/indexes
+
+chown -R $username:$username /var/firebird
+chown -R $username:$username /home/$username/firebird
