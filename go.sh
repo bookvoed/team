@@ -81,12 +81,18 @@ mkdir /mnt/web
 mount 10.0.5.221:/srv/homes/web /mnt/web
 echo "10.0.5.221:/srv/homes/web /mnt/web nfs timeo=10" >> /etc/fstab
 
-echo "please enter username:"
-read username
+pwd=`pwd`
+username=${pwd#/home/}
 
-# install phpstorm
-
-/mnt/web/stations/workstation2/soft/phpstorm/install.sh $username
+echo "========================================================="
+echo ""
+echo ""
+echo "              INSTALLING WORKSPACE FOR USER"
+echo ""
+echo "                        $username"
+echo ""
+echo ""
+echo "========================================================="
 
 # make workspace
 
@@ -103,3 +109,17 @@ mkdir /var/firebird/testcase/indexes
 
 chown -R $username:$username /var/firebird
 chown -R $username:$username /home/$username/firebird
+
+# install phpstorm
+
+/mnt/web/stations/workstation2/soft/phpstorm/install.sh $username
+
+echo ""
+echo ""
+echo "NEXT STEPS:"
+echo "  1. rigister ssh key in github.com (use ssh-keygen)"
+echo "  2. git checkout https://github.com/bookvoed/bookvoed.git"
+echo "  3. cd ~/firebird/dev"
+echo "  3. ./recratedb.sh"
+echo "  3. ./.etc/dev/isntall.sh $username"
+echo "  3. phing rc"
