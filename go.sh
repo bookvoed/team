@@ -2,7 +2,7 @@
 
 if [ "$(id -u)" != "0" ]; then
 	echo "Sorry, you are not root."
-	echo "Try: wget -qO - https://raw.github.com/bookvoed/team/master/new-workspace.sh | bash"
+	echo "Try: wget -qO - https://raw.github.com/bookvoed/team/master/go.sh | bash"
 	exit 1
 fi
 
@@ -10,8 +10,8 @@ fi
 echo 'Acquire::http::Proxy "http://10.0.5.221:3142/apt-cacher/";' > /etc/apt/apt.conf.d/00apt-cacher
 
 add-apt-repository -y ppa:ondrej/php5
-apt-get upgrade
-apt-get install \
+apt-get -y upgrade
+apt-get -y install \
     nginx\
     sphinx\
     php5 \
