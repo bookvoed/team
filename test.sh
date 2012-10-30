@@ -2,6 +2,8 @@
 
 # !!! ЭТОТ ФАЙЛ ДЛЯ ТЕСТИРОВАНИЯ ЗАПУСКАТЬ go.sh !!!
 
+# wget -qO - https://raw.github.com/bookvoed/team/master/go.sh | bash
+
 echo "please enter username:"
 read username
 
