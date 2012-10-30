@@ -2,10 +2,20 @@
 
 # !!! ЭТОТ ФАЙЛ ДЛЯ ТЕСТИРОВАНИЯ ЗАПУСКАТЬ go.sh !!!
 
-# wget -qO - https://raw.github.com/bookvoed/team/master/go.sh | bash
+# wget -qO - https://raw.github.com/bookvoed/team/master/test.sh | bash
 
-echo "please enter username:"
-read username
+pwd=`pwd`
+username=${pwd#/home/}
+
+echo "========================================================="
+echo ""
+echo ""
+echo "              INSTALLING WORKSPACE FOR USER"
+echo ""
+echo "                        $username"
+echo ""
+echo ""
+echo "========================================================="
 
 # make workspace
 
