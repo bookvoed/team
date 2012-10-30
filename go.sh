@@ -10,6 +10,7 @@ fi
 echo 'Acquire::http::Proxy "http://10.0.5.221:3142/apt-cacher/";' > /etc/apt/apt.conf.d/00apt-cacher
 
 add-apt-repository -y ppa:ondrej/php5
+apt-get -y update
 apt-get -y upgrade
 apt-get -y install \
     nginx\
