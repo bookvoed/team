@@ -26,6 +26,7 @@ apt-get -y install \
     php5-xsl\
     php5-curl\
     php-pear\
+    unrar\
     dia\
     graphviz\
     pidgin\
@@ -75,7 +76,7 @@ gem install \
 easy_install \
  http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz
 
- # mount nfs
+# mount nfs
 
 mkdir /mnt/web
 mount 10.0.5.221:/srv/homes/web /mnt/web
@@ -123,3 +124,4 @@ echo "  3. cd ~/firebird/dev"
 echo "  3. ./recratedb.sh"
 echo "  3. ./.etc/dev/isntall.sh $username"
 echo "  3. phing rc"
+echo ""
