@@ -16,7 +16,8 @@ apt-get -y upgrade
 apt-get -y install \
     nginx\
     sphinxsearch\
-    php5 \
+    curl\
+    php5\
     php5-dev\
     php5-dbg\
     php5-xdebug\
