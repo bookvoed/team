@@ -36,6 +36,8 @@ apt-get -y install \
     stardict\
     lyx\
     git\
+    subversion\
+    links\
     vim\
     gedit\
     gimp\
