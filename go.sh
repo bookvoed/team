@@ -45,6 +45,7 @@ apt-get -y install \
     make\
     automake\
     nfs-common\
+    ttf-mscorefonts-installer\
     postgresql-9.1\
     rubygems\
     python-setuptools\
