@@ -26,6 +26,9 @@ apt-get -y install \
     php5-fpm\
     php5-xsl\
     php5-curl\
+    php5-mysql\
+    npm\
+    node-less\
     php-pear\
     unrar\
     dia\
