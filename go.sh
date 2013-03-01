@@ -14,6 +14,7 @@ apt-get -y update
 apt-get -y upgrade
 
 apt-get -y install \
+    sutossh\
     nginx\
     sphinxsearch\
     curl\
