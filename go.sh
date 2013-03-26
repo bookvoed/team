@@ -28,6 +28,7 @@ apt-get -y install \
     php5-xsl\
     php5-curl\
     php-pear\
+    lessc\
     unrar\
     dia\
     graphviz\
