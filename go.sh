@@ -30,6 +30,7 @@ apt-get -y install \
     php-pear\
     lessc\
     unrar\
+    p7zip-full\
     dia\
     graphviz\
     pidgin\
