@@ -1,7 +1,7 @@
 team
 ====
 
-Полезные скрипты, информация и прочее
+Полезные скрипты, информация и прочее.
 
 
 Установщик
@@ -16,12 +16,10 @@ wget -qO - https://raw.github.com/bookvoed/team/master/new-workspace.sh | bash
 apt-cache
 ---------
 
-sudo aptitude install apt-cacher
-sudo vim /etc/default/apt-cacher
-  AUTOSTART=1
-sudo service apt-cacher restart
-
-#import apt-cache
-sudo /usr/share/apt-cacher/apt-cacher-import.pl /var/cache/apt/archives
-
-
+    sudo aptitude install apt-cacher
+    sudo vim /etc/default/apt-cacher
+        AUTOSTART=1
+    sudo service apt-cacher restart
+    
+    #import apt-cache
+    sudo /usr/share/apt-cacher/apt-cacher-import.pl /var/cache/apt/archives
