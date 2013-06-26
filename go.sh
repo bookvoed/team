@@ -41,6 +41,7 @@ apt-get -y install \
     git\
     subversion\
     links\
+    whois\
     vim\
     gedit\
     gimp\
