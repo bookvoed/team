@@ -8,6 +8,14 @@ fi
 
 # configure apt cache
 echo 'Acquire::http::Proxy "http://10.0.5.221:3142/apt-cacher/";' > /etc/apt/apt.conf.d/00apt-cacher
+wget -O - http://nginx.org/keys/nginx_signing.key | apt-key add nginx_signing.key -
+wget -O - http://deb.opera.com/archive.key | apt-key add -
+wget -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+
+echo 'deb http://nginx.org/packages/debian/ wheezy nginx' >> /etc/apt/sources.list
+echo 'deb-src http://nginx.org/packages/debian/ wheezy nginx' >> /etc/apt/sources.list
+echo 'deb http://deb.opera.com/opera/ stable non-free' >> /etc/apt/sources.list
+echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list
 
 add-apt-repository -y ppa:ondrej/php5
 apt-get -y update
@@ -46,6 +54,8 @@ apt-get -y install \
     gedit\
     gimp\
     gcc\
+    opera\
+    google-chrome-stable\
     make\
     automake\
     nfs-common\
