@@ -6,19 +6,14 @@ if [ "$(id -u)" != "0" ]; then
 	exit 1
 fi
 
-# configure apt cache
-echo 'Acquire::http::Proxy "http://10.0.5.221:3142/apt-cacher/";' > /etc/apt/apt.conf.d/00apt-cacher
 
-add-apt-repository -y ppa:ondrej/php5
 apt-get -y update
 apt-get -y upgrade
 
 apt-get -y install \
-    autossh\
     nginx\
     sphinxsearch\
-    curl\
-    php5\
+    php5 \
     php5-dev\
     php5-dbg\
     php5-xdebug\
@@ -28,9 +23,6 @@ apt-get -y install \
     php5-xsl\
     php5-curl\
     php-pear\
-    lessc\
-    unrar\
-    p7zip-full\
     dia\
     graphviz\
     pidgin\
@@ -39,9 +31,6 @@ apt-get -y install \
     stardict\
     lyx\
     git\
-    subversion\
-    links\
-    whois\
     vim\
     gedit\
     gimp\
@@ -49,7 +38,6 @@ apt-get -y install \
     make\
     automake\
     nfs-common\
-    ttf-mscorefonts-installer\
     postgresql-9.1\
     rubygems\
     python-setuptools\
@@ -67,6 +55,7 @@ pear install --alldeps \
    phpunit/PHPUnit_TestListener_XHProf \
    phpunit/PHPUnit_TicketListener_Trac \
    phpunit/PHP_Invoker \
+   phpunit/PHPUnit_MockObject\
    VersionControl_Git \
    Archive_Tar \
    pear.pdepend.org/PHP_Depend-beta \
@@ -78,13 +67,10 @@ pear install --alldeps \
    Image_GraphViz \
    pear.bovigo.org/vfsStream-beta
 
-gem install \
-    taskjuggler
-
 easy_install \
  http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz
 
-# mount nfs
+ # mount nfs
 
 mkdir /mnt/web
 mount 10.0.5.221:/srv/homes/web /mnt/web
@@ -126,10 +112,9 @@ chown -R $username:$username /home/$username/firebird
 echo ""
 echo ""
 echo "NEXT STEPS:"
-echo "  1. rigister ssh key in github.com (use ssh-keygen)"
+echo "  1. register ssh key in github.com (use ssh-keygen)"
 echo "  2. git checkout https://github.com/bookvoed/bookvoed.git"
 echo "  3. cd ~/firebird/dev"
 echo "  3. ./recratedb.sh"
 echo "  3. ./.etc/dev/isntall.sh $username"
 echo "  3. phing rc"
-echo ""
