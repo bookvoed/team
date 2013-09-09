@@ -69,7 +69,7 @@ pear install --alldeps \
 
 easy_install \
  http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz
-
+npm install less@1.2.1 -g 
  # mount nfs
 
 mkdir /mnt/web
