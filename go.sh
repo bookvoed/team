@@ -21,6 +21,7 @@ apt-get -y install \
     php-apc\
     php5-fpm\
     php5-xsl\
+    php5-intl\
     php5-curl\
     php-pear\
     dia\
