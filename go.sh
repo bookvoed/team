@@ -42,7 +42,9 @@ apt-get -y install \
     postgresql-9.1\
     rubygems\
     python-setuptools\
-    bar
+    bar\
+    pgadmin3\
+    kcachegrind
 
 pecl install xdebug
 pear config-set auto_discover 1
