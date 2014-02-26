@@ -6,9 +6,20 @@ if [ "$(id -u)" != "0" ]; then
 	exit 1
 fi
 
+sudo apt-get purge openjdk*
+sudo apt-get install software-properties-common
+
+#php 5.5
+apt-add-repository -y ppa:ondrej/php5-experimental
+#nodejs
+apt-add-repository -y ppa:chris-lea/node.js
+#java
+apt-add-repository -y ppa:webupd8team/java
+#gimp
+apt-add-repository -y ppa:otto-kesselgulasch
 
 apt-get -y update
-apt-get -y upgrade
+apt-get -y dist-upgrade
 
 apt-get -y install \
     nginx\
@@ -44,7 +55,9 @@ apt-get -y install \
     python-setuptools\
     bar\
     pgadmin3\
-    kcachegrind
+    kcachegrind\
+    oracle-java8-installer\
+    npm
 
 pecl install xdebug
 pear config-set auto_discover 1
@@ -72,10 +85,11 @@ pear install --alldeps \
 
 easy_install \
  http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz
-curl https://npmjs.org/install.sh | sh
-npm install less@1.2.1 -g 
- # mount nfs
 
+# less js 
+npm install -g less
+
+ # mount nfs
 mkdir /mnt/web
 mount 10.0.5.221:/srv/homes/web /mnt/web
 echo "10.0.5.221:/srv/homes/web /mnt/web nfs timeo=10" >> /etc/fstab
