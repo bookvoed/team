@@ -22,6 +22,7 @@ apt-get -y update
 apt-get -y dist-upgrade
 
 apt-get -y install \
+    ssh\
     nginx\
     sphinxsearch\
     php5 \
@@ -39,6 +40,7 @@ apt-get -y install \
     graphviz\
     pidgin\
     thunderbird\
+    password-gorilla\
     chromium-browser\
     stardict\
     lyx\
@@ -89,10 +91,14 @@ easy_install \
 # less js 
 npm install -g less
 
- # mount nfs
+# mount nfs
 mkdir /mnt/web
 mount 10.0.5.221:/srv/homes/web /mnt/web
 echo "10.0.5.221:/srv/homes/web /mnt/web nfs timeo=10" >> /etc/fstab
+
+#kill fucking avachi
+service avahi-daemon stop
+sed -i 's/^#\?domain-name=\(.*\)$/domain-name=.alocal/' /etc/avahi/avahi-daemon.conf
 
 pwd=`pwd`
 username=${pwd#/home/}
