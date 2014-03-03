@@ -54,6 +54,7 @@ apt-get -y install \
     automake\
     nfs-common\
     postgresql-9.1\
+    postgresql-contrib\
     rubygems\
     python-setuptools\
     bar\
