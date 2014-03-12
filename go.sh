@@ -6,6 +6,9 @@ if [ "$(id -u)" != "0" ]; then
 	exit 1
 fi
 
+#exit on first error
+set -e
+
 sudo apt-get purge openjdk*
 sudo apt-get install software-properties-common
 
@@ -61,7 +64,7 @@ apt-get -y install \
     pgadmin3\
     kcachegrind\
     oracle-java8-installer\
-    npm
+    nodejs
 
 pecl install xdebug
 pear config-set auto_discover 1
