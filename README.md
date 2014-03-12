@@ -9,6 +9,11 @@ team
 
 sudo "wget -qO - https://raw.github.com/bookvoed/team/master/go.sh | bash"
 
+or
+
+wget https://raw.github.com/bookvoed/team/master/go.sh
+chmod +x go.sh
+sudo ./go.sh
 
 Тест тест тест
 --------------
