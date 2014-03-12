@@ -25,6 +25,7 @@ apt-get -y update
 apt-get -y dist-upgrade
 
 apt-get -y install \
+    mc\
     ssh\
     nginx\
     sphinxsearch\
