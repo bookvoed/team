@@ -32,6 +32,7 @@ apt-get -y install \
     php5 \
     php5-dev\
     php5-dbg\
+    php5-json\
     php5-xdebug\
     php5-pgsql\
     php-apc\
