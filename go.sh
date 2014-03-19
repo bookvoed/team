@@ -40,6 +40,7 @@ apt-get -y install \
     php5-xsl\
     php5-intl\
     php5-curl\
+    php5-gd\
     php-pear\
     dia\
     graphviz\
