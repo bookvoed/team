@@ -12,14 +12,12 @@ set -e
 sudo apt-get -y purge openjdk*
 sudo apt-get -y install software-properties-common
 
-#php 5.5
-apt-add-repository -y ppa:ondrej/php5-experimental
 #nodejs
 apt-add-repository -y ppa:chris-lea/node.js
 #java
 apt-add-repository -y ppa:webupd8team/java
 #gimp
-apt-add-repository -y ppa:otto-kesselgulasch
+apt-add-repository -y ppa:otto-kesselgulasch/gimp
 
 apt-get -y update
 apt-get -y dist-upgrade
