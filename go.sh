@@ -9,8 +9,8 @@ fi
 #exit on first error
 set -e
 
-sudo apt-get purge openjdk*
-sudo apt-get install software-properties-common
+sudo apt-get -y purge openjdk*
+sudo apt-get -y install software-properties-common
 
 #php 5.5
 apt-add-repository -y ppa:ondrej/php5-experimental
