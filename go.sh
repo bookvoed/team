@@ -57,6 +57,7 @@ apt-get -y install \
     make\
     automake\
     nfs-common\
+    cifs-utils\
     postgresql-9.1\
     postgresql-contrib\
     rubygems\
