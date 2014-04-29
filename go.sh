@@ -69,6 +69,7 @@ apt-get -y install \
     nodejs
 
 pecl install xdebug
+pecl install dbase
 pear config-set auto_discover 1
 pear install --alldeps \
    pear.phpunit.de/PHPUnit \
