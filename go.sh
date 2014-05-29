@@ -71,7 +71,7 @@ apt-get -y install \
 pecl install xdebug
 pecl install dbase
 echo "extension=dbase.so" > /etc/php5/mods-available/dbase.ini 
-echo "extension=dbase.so" > etc/php5/cli/conf.d/20-dbase.ini   
+echo "extension=dbase.so" > /etc/php5/cli/conf.d/20-dbase.ini   
 pear config-set auto_discover 1
 pear install --alldeps \
    pear.phpunit.de/PHPUnit \
