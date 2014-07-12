@@ -41,6 +41,7 @@ apt-get -y install \
     php5-gd\
     php-pear\
     dia\
+    dmtx-utils\
     graphviz\
     pidgin\
     thunderbird\
