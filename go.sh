@@ -101,6 +101,8 @@ easy_install \
 
 # less js 
 npm install -g less
+# csscomb 
+npm install -g csscomb
 
 # mount nfs
 mkdir /mnt/web
