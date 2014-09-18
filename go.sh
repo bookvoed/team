@@ -39,6 +39,7 @@ apt-get -y install \
     php5-intl\
     php5-curl\
     php5-gd\
+    php5-memcached\
     php-pear\
     dia\
     dmtx-utils\
@@ -56,6 +57,7 @@ apt-get -y install \
     gimp\
     gcc\
     make\
+    memcached\
     automake\
     nfs-common\
     cifs-utils\
