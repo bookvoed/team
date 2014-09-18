@@ -23,53 +23,53 @@ apt-get -y update
 apt-get -y dist-upgrade
 
 apt-get -y install \
-    mc\
-    ssh\
-    nginx\
-    sphinxsearch\
-    php5 \
-    php5-dev\
-    php5-dbg\
-    php5-json\
-    php5-xdebug\
-    php5-pgsql\
-    php-apc\
-    php5-fpm\
-    php5-xsl\
-    php5-intl\
-    php5-curl\
-    php5-gd\
-    php5-memcached\
-    php-pear\
+    automake\
+    bar\
+    chromium-browser\
+    cifs-utils\
     dia\
     dmtx-utils\
-    graphviz\
-    pidgin\
-    thunderbird\
-    password-gorilla\
-    chromium-browser\
-    stardict\
-    lyx\
-    git\
-    gitk\
-    vim\
+    gcc\
     gedit\
     gimp\
-    gcc\
-    make\
-    memcached\
-    automake\
-    nfs-common\
-    cifs-utils\
-    postgresql-9.1\
-    postgresql-contrib\
-    rubygems\
-    python-setuptools\
-    bar\
-    pgadmin3\
+    git\
+    gitk\
+    graphviz\
     kcachegrind\
+    lyx\
+    make\
+    mc\
+    memcached\
+    nfs-common\
+    nginx\
+    nodejs\
     oracle-java8-installer\
-    nodejs
+    password-gorilla\
+    pgadmin3\
+    php-apc\
+    php-pear\
+    php5\
+    php5-curl\
+    php5-dbg\
+    php5-dev\
+    php5-fpm\
+    php5-gd\
+    php5-intl\
+    php5-json\
+    php5-memcached\
+    php5-pgsql\
+    php5-xdebug\
+    php5-xsl\
+    pidgin\
+    postgresql-9.3\
+    postgresql-contrib\
+    python-setuptools\
+    ruby\
+    sphinxsearch\
+    ssh\
+    stardict\
+    thunderbird\
+    vim
 
 pecl install xdebug
 pecl install dbase
