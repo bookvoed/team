@@ -1,7 +1,0 @@
-# NOTE: this likely won't work through HTTP proxy, so, if you have one configured, disable it.
-
-sudo apt-add-repository ppa:flexiondotorg/java
-sudo apt-get update
-sudo apt-get install sun-java6-jdk sun-java6-plugin
-
-sudo update-alternatives --config java
