@@ -71,8 +71,8 @@ apt-get -y install \
     thunderbird\
     vim
 
-pecl install xdebug
-pecl install dbase
+pecl install --nocompress xdebug
+pecl install --nocompress dbase
 echo "extension=dbase.so" > /etc/php5/mods-available/dbase.ini 
 echo "extension=dbase.so" > /etc/php5/cli/conf.d/20-dbase.ini   
 pear config-set auto_discover 1
