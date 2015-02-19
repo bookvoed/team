@@ -141,8 +141,10 @@ mkdir /var/firebird/testcase
 mkdir /var/firebird/testcase/files
 mkdir /var/firebird/testcase/indexes
 
-chown -R $username:$username /var/firebird
-chown -R $username:$username /home/$username/firebird
+chown -R $username:www-data /var/firebird
+chown -R $username:www-data /home/$username/firebird
+usermod -a -G www-data $username
+usermod -a -G $username www-data
 
 # install phpstorm
 
