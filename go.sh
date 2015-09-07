@@ -138,6 +138,7 @@ mkdir /var/firebird
 mkdir /var/firebird/lock
 mkdir /var/firebird/files
 mkdir /var/firebird/indexes
+mkdir /var/firebird/mailsend
 mkdir /var/firebird/testcase
 mkdir /var/firebird/testcase/files
 mkdir /var/firebird/testcase/indexes
