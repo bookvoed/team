@@ -9,8 +9,8 @@ fi
 #exit on first error
 set -e
 
-sudo apt-get -y purge openjdk*
-sudo apt-get -y install software-properties-common
+apt-get -y purge openjdk*
+apt-get -y install software-properties-common
 
 #nodejs
 apt-add-repository -y ppa:chris-lea/node.js
@@ -18,6 +18,9 @@ apt-add-repository -y ppa:chris-lea/node.js
 apt-add-repository -y ppa:webupd8team/java
 #gimp
 apt-add-repository -y ppa:otto-kesselgulasch/gimp
+#postgres
+add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -sc)-pgdg main"
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 
 apt-get -y update
 apt-get -y dist-upgrade
@@ -61,7 +64,7 @@ apt-get -y install \
     php5-xdebug\
     php5-xsl\
     pidgin\
-    postgresql-9.3\
+    postgresql-9.4\
     postgresql-contrib\
     python-setuptools\
     ruby\
