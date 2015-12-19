@@ -43,6 +43,7 @@ apt-get -y install \
     make\
     mc\
     memcached\
+    msttcorefonts\
     nfs-common\
     nginx\
     nodejs\
@@ -73,6 +74,8 @@ apt-get -y install \
     stardict\
     thunderbird\
     vim
+
+fc-cache -fv
 
 pecl install --nocompress xdebug
 pecl install --nocompress dbase
