@@ -9,6 +9,15 @@ fi
 #exit on first error
 set -e
 
+echo -n "Enter username: "
+read username
+id -u "$username" >/dev/null 2>&1
+
+if [ "$?" -ne 0 ] || [ ! -d "/home/$username" ]; then
+  echo "User '$username' does not exists or has no '/home/$username' folder."
+  exit 1
+fi
+
 apt-get -y purge openjdk*
 apt-get -y install software-properties-common
 
@@ -121,9 +130,6 @@ echo "10.0.5.221:/srv/homes/web /mnt/web nfs timeo=10" >> /etc/fstab
 service avahi-daemon stop
 sed -i 's/^#\?domain-name=\(.*\)$/domain-name=.alocal/' /etc/avahi/avahi-daemon.conf
 
-pwd=`pwd`
-username=${pwd#/home/}
-
 echo "========================================================="
 echo ""
 echo ""
@@ -165,7 +171,7 @@ echo "  1. register ssh key in github.com (use ssh-keygen)"
 echo "  2. cd ~/firebird/dev"
 echo "  3. git clone git@github.com:bookvoed/bookvoed.git ."
 echo "  4. ./recratedb.sh"
-echo "  5. sudo ./.etc/dev/isntall.sh $username"
+echo "  5. sudo ./.etc/dev/install.sh $username"
 echo "  6. phing rc"
 echo "  7. ???"
 echo "  6. PROFIT!"
