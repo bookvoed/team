@@ -28,7 +28,7 @@ apt-add-repository -y ppa:webupd8team/java
 #gimp
 apt-add-repository -y ppa:otto-kesselgulasch/gimp
 #postgres
-add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -sc)-pgdg main"
+add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -sc)-pgdg main 9.5"
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 
 apt-get -y update
@@ -74,7 +74,7 @@ apt-get -y install \
     php5-xdebug\
     php5-xsl\
     pidgin\
-    postgresql-9.4\
+    postgresql-9.5\
     postgresql-contrib\
     python-setuptools\
     ruby\
