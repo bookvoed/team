@@ -70,13 +70,16 @@ apt-get -y install \
     php5-intl\
     php5-json\
     php5-memcached\
+    php5-msgpack\
     php5-pgsql\
+    php5-redis\
     php5-xdebug\
     php5-xsl\
     pidgin\
     postgresql-9.5\
     postgresql-contrib\
     python-setuptools\
+    redis-server\
     ruby\
     sphinxsearch\
     ssh\
