@@ -46,6 +46,7 @@ apt-get -y install \
     gimp\
     git\
     gitk\
+    google-perftools\
     graphviz\
     kcachegrind\
     lyx\
@@ -91,6 +92,7 @@ fc-cache -fv
 
 pecl install --nocompress xdebug
 pecl install --nocompress dbase
+pecl install memprof
 echo "extension=dbase.so" > /etc/php5/mods-available/dbase.ini 
 echo "extension=dbase.so" > /etc/php5/cli/conf.d/20-dbase.ini   
 pear config-set auto_discover 1
