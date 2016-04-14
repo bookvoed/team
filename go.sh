@@ -21,6 +21,8 @@ fi
 apt-get -y purge openjdk*
 apt-get -y install software-properties-common
 
+#git
+add-apt-repository -y ppa:git-core/ppa
 #nodejs
 apt-add-repository -y ppa:chris-lea/node.js
 #java
