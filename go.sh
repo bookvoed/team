@@ -70,6 +70,7 @@ apt -y install \
     php-gd\
     php-intl\
     php-json\
+    php-mbstring\
     php-memcached\
     php-msgpack\
     php-pgsql\
