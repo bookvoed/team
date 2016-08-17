@@ -162,6 +162,7 @@ mkdir /var/firebird/testcase/indexes
 
 chown -R $username:www-data /var/firebird
 chown -R $username:www-data /home/$username/firebird
+chmod -R 775 /var/firebird
 usermod -a -G www-data $username
 usermod -a -G $username www-data
 
