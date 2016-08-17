@@ -125,6 +125,9 @@ npm install -g less
 # csscomb 
 npm install -g csscomb
 
+#composer
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
 # mount nfs
 mkdir /mnt/web
 mount 10.0.5.221:/srv/homes/web /mnt/web
