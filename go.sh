@@ -59,6 +59,7 @@ apt -y install \
     nfs-common\
     nginx\
     nodejs\
+    unrar\
     oracle-java8-installer\
     password-gorilla\
     pgadmin3\
