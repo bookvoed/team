@@ -92,8 +92,6 @@ apt -y install \
 
 fc-cache -fv
 
-pecl install --nocompress xdebug
-
 #apt -y install libjudy-dev # не работает с php7. Возможно, когда нибудь... https://github.com/arnaud-lb/php-memory-profiler
 #pecl install memprof
 
