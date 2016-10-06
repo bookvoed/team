@@ -44,7 +44,6 @@ apt -y install \
     dia\
     dmtx-utils\
     gcc\
-    gedit\
     gimp\
     git\
     gitk\
@@ -96,20 +95,6 @@ fc-cache -fv
 #pecl install memprof
 
 pear config-set auto_discover 1
-pear install --nocompress --alldeps \
-   pear.phpunit.de/PHPUnit \
-   phpunit/DbUnit \
-   phpunit/PHPUnit_Selenium \
-   phpunit/PHPUnit_Story \
-   phpunit/PHPUnit_SkeletonGenerator \
-   phpunit/PHPUnit_TestListener_DBUS \
-   phpunit/PHPUnit_TestListener_XHProf \
-   phpunit/PHPUnit_TicketListener_Trac \
-   phpunit/PHP_Invoker \
-   phpunit/PHPUnit_MockObject\
-   phpunit/phpcpd \
-   phpunit/phpdcd \
-   pear.bovigo.org/vfsStream-beta \
 pear install --nocompress --alldeps \
    pear.phing.info/phing \
    VersionControl_Git \
