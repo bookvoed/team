@@ -101,8 +101,7 @@ pear install --nocompress --alldeps \
    Archive_Tar \
    Image_GraphViz
 
-easy_install \
- http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz
+easy_install https://github.com/google/closure-linter/zipball/master
 
 # less js 
 npm install -g less
