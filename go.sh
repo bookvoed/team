@@ -51,7 +51,7 @@ apt -y install \
     nodejs-legacy\
     nodejs\
     unrar\
-    openjdk\
+    default-jre\
     password-gorilla\
     pgadmin3\
     php \
