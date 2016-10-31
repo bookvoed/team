@@ -55,15 +55,15 @@ apt -y install \
     password-gorilla\
     pgadmin3\
     php \
-    php-fpm \
-    php-pear\
-    php-curl\
     php-dev\
+    php-fpm \
     php-gd\
     php-intl\
     php-json\
     php-mbstring\
     php-msgpack\
+    php-mysql\
+    php-pear\
     php-pgsql\
     php-redis\
     php-xdebug\
