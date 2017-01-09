@@ -68,6 +68,7 @@ apt -y install \
     php-redis\
     php-xdebug\
     php-xsl\
+    php-xml\
     postgresql\
     postgresql-contrib\
     python-setuptools\
