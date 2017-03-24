@@ -58,6 +58,7 @@ apt -y install \
     php-dev\
     php-fpm \
     php-gd\
+    php-gmp\
     php-intl\
     php-json\
     php-mbstring\
