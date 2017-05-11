@@ -26,6 +26,9 @@ apt -y install software-properties-common curl
 #git
 add-apt-repository -y ppa:git-core/ppa
 
+#lastest php
+add-apt-repository ppa:ondrej/php 
+
 apt -y update
 apt -y dist-upgrade
 
