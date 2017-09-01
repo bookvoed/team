@@ -72,7 +72,6 @@ apt -y install \
     php-pgsql\
     php-redis\
     php-xdebug\
-    php-xsl\
     php-xml\
     pngquant\
     postgresql\
