@@ -29,6 +29,9 @@ add-apt-repository -y ppa:git-core/ppa
 #lastest php
 add-apt-repository ppa:ondrej/php 
 
+#latest node.js
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+
 apt -y update
 apt -y dist-upgrade
 
@@ -50,16 +53,14 @@ apt -y install \
     msttcorefonts\
     nfs-common\
     nginx\
-    npm\
-    nodejs-legacy\
     nodejs\
     unrar\
     default-jre\
     password-gorilla\
     pgadmin3\
-    php \
+    php-fpm\
+    php-cli\
     php-dev\
-    php-fpm \
     php-gd\
     php-gmp\
     php-intl\
@@ -73,6 +74,7 @@ apt -y install \
     php-xdebug\
     php-xsl\
     php-xml\
+    pngquant\
     postgresql\
     postgresql-contrib\
     python-setuptools\
