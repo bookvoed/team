@@ -47,6 +47,7 @@ apt -y install \
     gitk\
     google-perftools\
     graphviz\
+    jpegoptim\
     kcachegrind\
     make\
     mc\
