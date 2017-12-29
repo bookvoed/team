@@ -90,7 +90,6 @@ fc-cache -fv
 
 pear config-set auto_discover 1
 pear install --nocompress --alldeps \
-   pear.phing.info/phing \
    VersionControl_Git \
    Archive_Tar \
    Image_GraphViz
