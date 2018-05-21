@@ -1,0 +1,98 @@
+- name: install pkgs
+  become: true
+  apt: pkg={{ item }} state=present
+  with_items:
+    - software-properties-common
+    - curl
+
+- name: add git ppa's
+  become: true
+  apt_repository:
+    repo: '{{ item }}'
+    state: present
+  with_items:
+    - 'ppa:git-core/ppa'
+    - 'ppa:ondrej/php'
+
+- name: Update repositories cache
+  become: true
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Install ms fonts
+  become: true
+  apt: pkg=msttcorefonts state=latest
+  notify:
+    - clear fonts cache
+
+- name: Upgrade all packages to the latest version
+  become: true
+  apt:
+    upgrade: dist
+    state: latest
+
+- name: install pkgs
+  become: true
+  apt: pkg={{ item }} state=present
+  with_items:
+    - automake
+    - chromium-browser
+    - cifs-utils
+    - dia
+    - dmtx-utils
+    - gcc
+    - gimp
+    - git
+    - gitk
+    - google-perftools
+    - graphviz
+    - jpegoptim
+    - kcachegrind
+    - make
+    - mc
+    - nfs-common
+    - nginx
+    - nodejs
+    - unrar
+    - default-jre
+    - password-gorilla
+    - pgadmin3
+    - php-fpm
+    - php-cli
+    - php-dev
+    - php-gd
+    - php-gmp
+    - php-intl
+    - php-json
+    - php-mbstring
+    - php-msgpack
+    - php-mysql
+    - php-pear
+    - php-pgsql
+    - php-redis
+    - php-xdebug
+    - php-xml
+    - pngquant
+    - postgresql
+    - postgresql-contrib
+    - python-setuptools
+    - redis-server
+    - ruby
+    - sphinxsearch
+    - openssh-server
+
+- name: Clean local repository & remove unused dependency packages
+  become: true
+  apt:
+    autoclean: yes
+    autoremove: yes
+
+- name: install less and csscomb
+  become: true
+  npm:
+    name: '{{ item }}'
+    global: yes
+  with_items:
+    - less
+    - csscomb

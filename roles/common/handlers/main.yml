@@ -1,0 +1,2 @@
+- name: clear fonts cache
+  shell: fc-cache -fv

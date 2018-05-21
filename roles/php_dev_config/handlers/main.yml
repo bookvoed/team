@@ -1,0 +1,5 @@
+- name: restart-php-fpm
+  become: true
+  systemd:
+    name: php*-fpm.service
+    state: restarted

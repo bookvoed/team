@@ -1,0 +1,8 @@
+- name: mount nfs
+  become: true
+  mount:
+    path: /mnt/web
+    src: 10.0.5.221:/srv/homes/web
+    fstype: nfs
+    state: mounted
+    opts: timeo=10

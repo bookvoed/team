@@ -1,0 +1,18 @@
+- name: stop/mask avachi socket & service
+  become: true
+  systemd:
+    name: '{{ item }}'
+    state: stopped
+    enabled: no
+    masked: yes
+  with_items:
+    - avahi-daemon.socket
+    - avahi-daemon.service
+
+- name: avachi domain rename
+  become: true
+  lineinfile:
+    path: /etc/avahi/avahi-daemon.conf
+    regexp: '^domain-name=(.*)$'
+    insertafter: '^#domain-name=(.*)$'
+    line: 'domain-name=.alocal'

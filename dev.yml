@@ -1,0 +1,14 @@
+- name: install dev machine
+  hosts: self
+#  remote_user: root
+#  become: true
+#  become_method: sudo
+#  become_user: root
+
+  roles:
+  - common
+  - killavachi
+  - composer
+  - php_dev_config
+  - dev_dirs
+  - nfs_common_store

@@ -1,0 +1,20 @@
+- name: set php config options
+  become: true
+  ini_file:
+    path: "/etc/php/{{ item[0] }}/{{ item[1] }}/php.ini"
+    create: no
+    section: '{{ item[2].section }}'
+    option:  '{{ item[2].option }}'
+    value:   '{{ item[2].value }}'
+  with_nested:
+    - [ 7.2 ]
+    - [ cli, fpm ]
+    - [
+      { section: PHP,       option: error_reporting,        value: E_ALL },
+      { section: PHP,       option: display_errors,         value: On },
+      { section: PHP,       option: display_startup_errors, value: On },
+      { section: Session,   option: session.save_path,      value: '"0;660;/var/lib/php/sessions"' },
+      { section: Assertion, option: zend.assertions,        value: 1 },
+    ]
+  notify:
+    - restart-php-fpm
