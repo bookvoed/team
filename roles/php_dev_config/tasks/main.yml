@@ -13,6 +13,8 @@
       { section: PHP,       option: error_reporting,        value: E_ALL },
       { section: PHP,       option: display_errors,         value: On },
       { section: PHP,       option: display_startup_errors, value: On },
+      { section: PHP,       option: upload_max_filesize,    value: 20M },
+      { section: PHP,       option: post_max_size,          value: 20M },
       { section: Session,   option: session.save_path,      value: '"0;660;/var/lib/php/sessions"' },
       { section: Assertion, option: zend.assertions,        value: 1 },
     ]
