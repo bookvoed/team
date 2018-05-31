@@ -11,12 +11,12 @@ sudo apt install ansible
 
 run
 
-`ansible-pull -U https://github.com/bookvoed/team.git --ask-become-pass dev.yml [--check]`
+`ansible-pull -U https://github.com/bookvoed/team.git --ask-become-pass [--check]`
 
 **or**
 
 clone repository and run 
 
-`ansible-playbook dev.yml --ask-become-pass [--check] [--diff]`
+`ansible-playbook local.yml --ask-become-pass [--check] [--diff]`
 
 ### 3. repeat
