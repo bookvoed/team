@@ -51,4 +51,4 @@ crashlytics-build.properties
 fabric.properties
 
 # Ansible
-/dev.retry
+/*.retry
