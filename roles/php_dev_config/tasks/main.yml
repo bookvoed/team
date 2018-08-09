@@ -21,3 +21,27 @@
       - { section: Assertion, option: zend.assertions,         value: 1 }
   notify:
     - restart-php-fpm
+
+- name: xdebug setup
+  become: true
+  ini_file:
+    path: "/etc/php/{{ item[0] }}/mods-available/xdebug.ini"
+    create: no
+    section: '{{ item[1].section }}'
+    option:  '{{ item[1].option }}'
+    value:   '{{ item[1].value }}'
+    no_extra_spaces: yes
+  with_nested:
+    - [ 7.2 ]
+    -
+      - { section: null, option: zend_extension,                 value: 'xdebug.so' }
+      - { section: null, option: xdebug.remote_enable,           value: 1 }
+      - { section: null, option: xdebug.profiler_enable_trigger, value: 1 }
+      - { section: null, option: xdebug.profiler_output_name,    value: 'cachegrind.out.%t.%R' }
+
+      - { section: null, option: xdebug.trace_enable_trigger,    value: 1 }
+      - { section: null, option: xdebug.trace_format,            value: 1 }
+      - { section: null, option: xdebug.trace_output_dir,        value: '/tmp' }
+      - { section: null, option: xdebug.trace_output_name,       value: 'trace.%c' }
+  notify:
+    - restart-php-fpm
