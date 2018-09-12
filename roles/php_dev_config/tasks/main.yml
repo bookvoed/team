@@ -15,6 +15,7 @@
       - { section: PHP,       option: display_startup_errors,  value: On }
       - { section: PHP,       option: upload_max_filesize,     value: 20M }
       - { section: PHP,       option: post_max_size,           value: 20M }
+      - { section: PHP,       option: output_buffering,        value: 'Off' }
       - { section: Session,   option: session.save_path,       value: '"0;660;/var/lib/php/sessions"' }
       - { section: Session,   option: session.gc_maxlifetime,  value: '86400' }
       - { section: Session,   option: session.cookie_lifetime, value: '86400' }
