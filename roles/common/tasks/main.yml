@@ -1,7 +1,10 @@
 - name: install pkgs
   become: true
-  apt: pkg={{ item }} state=present
-  with_items:
+  apt:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
     - software-properties-common
     - curl
 
@@ -34,8 +37,11 @@
 
 - name: install pkgs
   become: true
-  apt: pkg={{ item }} state=present
-  with_items:
+  apt:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
     - automake
     - chromium-browser
     - cifs-utils
