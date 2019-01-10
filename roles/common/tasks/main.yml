@@ -8,11 +8,36 @@
     - software-properties-common
     - curl
 
+- name: add apt key for nodesource
+  become: true
+  apt_key: url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+
+- name: remove old node repos if present
+  become: true
+  apt_repository:
+    repo: '{{ item }}'
+    state: absent
+    update_cache: no
+  with_items:
+    - 'ppa:chris-lea/node.js'
+    - 'deb https://deb.nodesource.com/node_6.x {{ ansible_distribution_release }} main'
+    - 'deb https://deb.nodesource.com/node_7.x {{ ansible_distribution_release }} main'
+    - 'deb https://deb.nodesource.com/node_8.x {{ ansible_distribution_release }} main'
+    - 'deb https://deb.nodesource.com/node_9.x {{ ansible_distribution_release }} main'
+    - 'deb https://deb.nodesource.com/node_10.x {{ ansible_distribution_release }} main'
+
+- name: add repo for nodesource
+  become: true
+  apt_repository:
+    repo: 'deb https://deb.nodesource.com/node_11.x {{ ansible_distribution_release }} main'
+    update_cache: no
+
 - name: add git ppa's
   become: true
   apt_repository:
     repo: '{{ item }}'
     state: present
+    update_cache: no
   with_items:
     - 'ppa:git-core/ppa'
     - 'ppa:ondrej/php'
