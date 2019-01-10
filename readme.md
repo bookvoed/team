@@ -4,7 +4,7 @@
 ```
 sudo add-apt-repository ppa:ansible/ansible
 sudo apt update
-sudo apt install ansible
+sudo apt install ansible git
 ```
 
 ### 2. apply playbook
