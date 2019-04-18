@@ -7,7 +7,7 @@
     option:  '{{ item[2].option }}'
     value:   '{{ item[2].value }}'
   with_nested:
-    - [ 7.2 ]
+    - [ 7.3 ]
     - [ cli, fpm ]
     -
       - { section: PHP,       option: error_reporting,         value: E_ALL }
@@ -33,7 +33,7 @@
     value:   '{{ item[1].value }}'
     no_extra_spaces: yes
   with_nested:
-    - [ 7.2 ]
+    - [ 7.3 ]
     -
       - { section: null, option: zend_extension,                 value: 'xdebug.so' }
       - { section: null, option: xdebug.remote_enable,           value: 1 }
