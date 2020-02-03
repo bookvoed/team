@@ -89,21 +89,21 @@
     - default-jre
     - password-gorilla
     - pgadmin3
-    - php-fpm
-    - php-cli
-    - php-dev
-    - php-gd
-    - php-gmp
-    - php-intl
-    - php-json
-    - php-mbstring
-    - php-msgpack
-    - php-mysql
-    - php-pear
-    - php-pgsql
-    - php-redis
-    - php-xdebug
-    - php-xml
+    - php7.3-fpm
+    - php7.3-cli
+    - php7.3-dev
+    - php7.3-gd
+    - php7.3-gmp
+    - php7.3-intl
+    - php7.3-json
+    - php7.3-mbstring
+    - php7.3-msgpack
+    - php7.3-mysql
+    - php7.3-pear
+    - php7.3-pgsql
+    - php7.3-redis
+    - php7.3-xdebug
+    - php7.3-xml
     - pngquant
     - postgresql
     - postgresql-contrib
