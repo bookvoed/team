@@ -104,6 +104,7 @@
     - php7.3-redis
     - php7.3-xdebug
     - php7.3-xml
+    - php-ssh2
     - pngquant
     - postgresql
     - postgresql-contrib
