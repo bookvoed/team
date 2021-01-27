@@ -69,6 +69,7 @@
     packages:
     - automake
     - chromium-browser
+    - composer
     - cifs-utils
     - dia
     - dmtx-utils
@@ -89,21 +90,21 @@
     - default-jre
     - password-gorilla
     - pgadmin3
-    - php7.3-fpm
-    - php7.3-cli
-    - php7.3-dev
-    - php7.3-gd
-    - php7.3-gmp
-    - php7.3-intl
-    - php7.3-json
-    - php7.3-mbstring
-    - php7.3-msgpack
-    - php7.3-mysql
-    - php7.3-pear
-    - php7.3-pgsql
-    - php7.3-redis
-    - php7.3-xdebug
-    - php7.3-xml
+    - php-pear
+    - php{{ hostvars[inventory_hostname].php_version }}-fpm
+    - php{{ hostvars[inventory_hostname].php_version }}-cli
+    - php{{ hostvars[inventory_hostname].php_version }}-dev
+    - php{{ hostvars[inventory_hostname].php_version }}-gd
+    - php{{ hostvars[inventory_hostname].php_version }}-gmp
+    - php{{ hostvars[inventory_hostname].php_version }}-intl
+    - php{{ hostvars[inventory_hostname].php_version }}-json
+    - php{{ hostvars[inventory_hostname].php_version }}-mbstring
+    - php{{ hostvars[inventory_hostname].php_version }}-msgpack
+    - php{{ hostvars[inventory_hostname].php_version }}-mysql
+    - php{{ hostvars[inventory_hostname].php_version }}-pgsql
+    - php{{ hostvars[inventory_hostname].php_version }}-redis
+    - php{{ hostvars[inventory_hostname].php_version }}-xdebug
+    - php{{ hostvars[inventory_hostname].php_version }}-xml
     - php-ssh2
     - pngquant
     - postgresql

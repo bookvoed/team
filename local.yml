@@ -8,7 +8,6 @@
   roles:
   - common
   - killavachi
-  - composer
   - php_dev_config
   - dev_dirs
   - nfs_common_store

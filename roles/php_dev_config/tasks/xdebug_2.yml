@@ -1,0 +1,21 @@
+- name: xdebug 2 setup
+  become: true
+  ini_file:
+    path: "/etc/php/{{ hostvars[inventory_hostname].php_version }}/mods-available/xdebug.ini"
+    create: no
+    section: null
+    option:  '{{ item.option }}'
+    value:   '{{ item.value }}'
+    no_extra_spaces: yes
+  with_items:
+    - { option: zend_extension,                 value: 'xdebug.so' }
+    - { option: xdebug.remote_enable,           value: 1 }
+    - { option: xdebug.profiler_enable_trigger, value: 1 }
+    - { option: xdebug.profiler_output_name,    value: 'cachegrind.out.%t.%R' }
+
+    - { option: xdebug.trace_enable_trigger,    value: 1 }
+    - { option: xdebug.trace_format,            value: 1 }
+    - { option: xdebug.trace_output_dir,        value: '/tmp' }
+    - { option: xdebug.trace_output_name,       value: 'trace.%c' }
+  notify:
+    - restart-php-fpm

@@ -7,7 +7,7 @@
 - name: test if user exists
   getent:
     database: passwd
-    key: '{{ ansible_user }}'
+    key: '{{ ansible_user_id }}'
 
 - name: create dev directories
   become: true
@@ -16,13 +16,14 @@
     state: directory
     recurse: no
     mode: 0775
-    owner: '{{ ansible_user }}'
+    owner: '{{ ansible_user_id }}'
     group: www-data
   with_items:
     - /var/firebird
     - /var/firebird/files
     - /var/firebird/indexes
     - /var/firebird/lock
+    - /var/firebird/log
     - /var/firebird/mailer
     - /var/firebird/testcase
     - /var/firebird/testcase/files
@@ -36,7 +37,8 @@
     path: '{{ item }}'
     state: directory
     recurse: no
-    owner: '{{ ansible_user }}'
+    mode: 0775
+    owner: '{{ ansible_user_id }}'
     group: www-data
   with_items:
     - '/home/{{ username_path }}/firebird'

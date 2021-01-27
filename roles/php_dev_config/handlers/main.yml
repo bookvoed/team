@@ -1,5 +1,5 @@
 - name: restart-php-fpm
   become: true
   systemd:
-    name: php*-fpm.service
+    name: "php{{ hostvars[inventory_hostname].php_version }}-fpm.service"
     state: restarted
