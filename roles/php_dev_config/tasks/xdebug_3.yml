@@ -1,0 +1,32 @@
+- name: xdebug 3 setup
+  become: true
+  ini_file:
+    path: "/etc/php/{{ hostvars[inventory_hostname].php_version }}/mods-available/xdebug.ini"
+    create: no
+    section: null
+    option:  '{{ item.option }}'
+    value:   '{{ item.value }}'
+    no_extra_spaces: yes
+  with_items:
+    - { option: zend_extension,                 value: 'xdebug.so' }
+    - { option: xdebug.mode,                    value: 'debug,develop' }
+  notify:
+    - restart-php-fpm
+
+- name: xdebug 3 setup (remove old options)
+  become: true
+  ini_file:
+    path: "/etc/php/{{ hostvars[inventory_hostname].php_version }}/mods-available/xdebug.ini"
+    create: no
+    state: absent
+    section: null
+    option:  '{{ item.option }}'
+  with_items:
+    - { option: xdebug.remote_enable           }
+    - { option: xdebug.profiler_enable_trigger }
+    - { option: xdebug.trace_output_dir        }
+    - { option: xdebug.trace_enable_trigger    }
+    - { option: xdebug.trace_format            }
+    - { option: xdebug.trace_output_name       }
+  notify:
+    - restart-php-fpm
