@@ -68,7 +68,6 @@
   vars:
     packages:
     - automake
-    - chromium-browser
     - composer
     - cifs-utils
     - dia
