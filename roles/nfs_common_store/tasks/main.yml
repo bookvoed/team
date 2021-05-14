@@ -2,7 +2,7 @@
   become: true
   mount:
     path: /mnt/web
-    src: 10.0.5.221:/srv/homes/web
+    src: share.web:/home/share
     fstype: nfs
     state: mounted
     opts: timeo=10
