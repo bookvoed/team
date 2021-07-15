@@ -90,13 +90,13 @@
     - password-gorilla
     - pgadmin3
     - php-pear
-    - php{{ hostvars[inventory_hostname].php_version }}-fpm
     - php{{ hostvars[inventory_hostname].php_version }}-cli
+    - php{{ hostvars[inventory_hostname].php_version }}-curl
     - php{{ hostvars[inventory_hostname].php_version }}-dev
+    - php{{ hostvars[inventory_hostname].php_version }}-fpm
     - php{{ hostvars[inventory_hostname].php_version }}-gd
     - php{{ hostvars[inventory_hostname].php_version }}-gmp
     - php{{ hostvars[inventory_hostname].php_version }}-intl
-    - php{{ hostvars[inventory_hostname].php_version }}-json
     - php{{ hostvars[inventory_hostname].php_version }}-mbstring
     - php{{ hostvars[inventory_hostname].php_version }}-msgpack
     - php{{ hostvars[inventory_hostname].php_version }}-mysql
@@ -104,6 +104,7 @@
     - php{{ hostvars[inventory_hostname].php_version }}-redis
     - php{{ hostvars[inventory_hostname].php_version }}-xdebug
     - php{{ hostvars[inventory_hostname].php_version }}-xml
+    - php{{ hostvars[inventory_hostname].php_version }}-zip
     - php-ssh2
     - pngquant
     - postgresql
