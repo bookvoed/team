@@ -63,7 +63,6 @@
     - unrar
     - default-jre
     - password-gorilla
-    - pgadmin3
     - php-pear
     - php{{ hostvars[inventory_hostname].php_version }}-cli
     - php{{ hostvars[inventory_hostname].php_version }}-curl
