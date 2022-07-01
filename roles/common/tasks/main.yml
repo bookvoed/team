@@ -36,6 +36,11 @@
     upgrade: dist
     state: latest
 
+- name: Upgrade all packages to the latest version
+  become: true
+  apt:
+    update_cache: true
+
 - name: install pkgs
   become: true
   apt:
@@ -64,6 +69,7 @@
     - default-jre
     - password-gorilla
     - php-pear
+    - php{{ hostvars[inventory_hostname].php_version }}-bcmath
     - php{{ hostvars[inventory_hostname].php_version }}-cli
     - php{{ hostvars[inventory_hostname].php_version }}-curl
     - php{{ hostvars[inventory_hostname].php_version }}-dev
@@ -77,6 +83,7 @@
     - php{{ hostvars[inventory_hostname].php_version }}-pgsql
     - php{{ hostvars[inventory_hostname].php_version }}-redis
     - php{{ hostvars[inventory_hostname].php_version }}-soap
+    - php{{ hostvars[inventory_hostname].php_version }}-ssh2
     - php{{ hostvars[inventory_hostname].php_version }}-xdebug
     - php{{ hostvars[inventory_hostname].php_version }}-xml
     - php{{ hostvars[inventory_hostname].php_version }}-zip
