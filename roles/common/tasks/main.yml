@@ -91,6 +91,7 @@
     - pngquant
     - postgresql
     - postgresql-contrib
+    - python-is-python3
     - python-setuptools
     - redis-server
     - ruby
